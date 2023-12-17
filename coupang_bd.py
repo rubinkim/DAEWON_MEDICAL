@@ -20,5 +20,5 @@ response = requests.get(url, proxies=proxies, verify=False)     # verify = False
 html = response.text
 #print(html[:1000])
 soup = BeautifulSoup(html, "html.parser")
-items = soup.select(".search-product ")                          # class 이니까 .을 앞에 찍었다.
+items = soup.select(".search-product search-product__ad-badge")                          # class 이니까 .을 앞에 찍었다.
 print(len(items))                                               # 한화면에 36개씩 보기로 되어 있는데 59개가 나왔다. 선생은 36이다. 왜 나만???
