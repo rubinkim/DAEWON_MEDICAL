@@ -21,7 +21,7 @@ html = response.text
 #print(html[:1000])
 soup = BeautifulSoup(html, "html.parser")
 #items = soup.select(".search-product.search-product__ad-badge") # class 이니까 .을 앞에 찍었다. 그리고 search-product search-product__ad-badge는 빈칸을 .으로 바꾸어야 한다.
-                                                                # 한화면에 36개씩 보기로 되어 있는데 59개가 나왔다. 선생은 36이다. 왜 나만?
+                                                                 # 한화면에 36개씩 보기로 되어 있는데 59개가 나왔다. 선생은 36이다. 왜 나만?
 
-items = soup.select("[class=search-product]")
+items = soup.select("[class=search-product]")                    # 이제서야 27개가 나왔다.            
 print(len(items))
