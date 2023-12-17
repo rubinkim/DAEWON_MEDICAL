@@ -2,6 +2,8 @@
 
 from bs4 import BeautifulSoup
 import requests
+import warnings
+warnings.filterwarnings("ignore", category=requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
 host = "brd.superproxy.io:22225"
 user_name = "brd-customer-hl_878d4fe7-zone-unblocker"
