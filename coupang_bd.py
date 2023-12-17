@@ -27,5 +27,8 @@ items = soup.select("[class=search-product]")                    # 이제서야 
 print(len(items))
 
 for item in items:
-    name = item.select_one(".name").text                        # select를 이용하면 list를 return하므로 다시 [0]와 같은 작업을 해줘야 하는데 select_one은 value를 return한다.
-    print(name)
+    name = item.select_one(".name").text                         # select를 이용하면 list를 return하므로 다시 [0]와 같은 작업을 해줘야 하는데 select_one은 value를 return한다.
+    price = item.select_one(".price-value")
+    if not price:                                                # 중고제품인 경우에는 price.value라는 class가 없으므로 .text를 안붙이면 에러가 발생하는 대신 none을 반환한다.
+        continue
+    print(f"{name} : {price.text}")                                   # 크롤링할 때 마다 결과값이 다르게 나온다.
