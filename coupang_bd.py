@@ -25,3 +25,7 @@ soup = BeautifulSoup(html, "html.parser")
 
 items = soup.select("[class=search-product]")                    # 이제서야 27개가 나왔다.            
 print(len(items))
+
+for item in items:
+    name = item.select_one(".name").text                        # select를 이용하면 list를 return하므로 다시 [0]와 같은 작업을 해줘야 하는데 select_one은 value를 return한다.
+    print(name)
