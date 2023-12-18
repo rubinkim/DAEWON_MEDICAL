@@ -35,3 +35,13 @@ for item in items:
     print(f"{name} : {price.text}")                              # 크롤링할 때 마다 결과값이 다르게 나온다.
     print(link)
     print()
+    
+"""
+https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81&channel=recent&component=&
+eventCategory=SRP&trcid=&traid=&sorter=scoreDesc&minPrice=&maxPrice=&priceRange=&
+filterType=&listSize=36&filter=&isPriceRange=false&brand=&offerCondition=&rating=0&
+page=3&rocketAll=false&searchIndexingToken=1=9&backgroundColor=
+"""
+# 위에서 %EB%85%B8%ED%8A%B8%EB%B6%81부분이 노트북임은 아래에서 확인할 수 가 있다.
+# https://www.coupang.com/np/search?q=노트북&channel=recent
+# https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81&channel=recent
