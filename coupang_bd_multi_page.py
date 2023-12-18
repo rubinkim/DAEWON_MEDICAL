@@ -20,6 +20,8 @@ keyword = input("검색할 제품 입력 : ")
 for page_num in range(1, 5):      # 쿠팡에서 검색할 단어에 해당하는 페이지를 1부터 4까지 검색해서 자료를 가져올 것이다.
     print(f"<<<<< {page_num} >>>>>")
     url = f"https://www.coupang.com/np/search?q={keyword}&page={page_num}&listSize=72"
+    print(f"url : {url}")         # url이 잘 작동하고 있는지 확인해볼 목적이다.
+    print()
 
     response = requests.get(url, proxies=proxies, verify=False)     # verify = False를 넣어주면 ssl인증과정을 생략하기 때문에 에러가 발생하지 않는다.
     html = response.text
