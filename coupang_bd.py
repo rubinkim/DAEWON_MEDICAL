@@ -60,5 +60,6 @@ offerCondition=&filter=&availableDeliveryFilter=&filterType=&isPriceRange=false&
 priceRange=&minPrice=&maxPrice=&page=1&trcid=&traid=&filterSetByUser=true&channel=
 recent&backgroundColor=&searchProductCount=1215796&component=&rating=0&sorter=scoreDesc&listSize=72
 """
-# 이중 한꺼번에 72개씩 보기와 관련된 부분은 맨마지막에 &listSize=72로 표기되어 있다. 이부분만 복붙하자.
-# https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81&page=7&listSize=72
+# 이중 한꺼번에 72개씩 보기와 관련된 부분은 맨마지막에 &listSize=72로 표기되어 있다. 이부분만 복붙하자. 페이지를 3으로 해보자.
+# https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81&page=3&listSize=72
+# 페이지는 3이고 72개씩 보기로 잘 변경되어 있는게 확인된다.
