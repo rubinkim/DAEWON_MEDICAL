@@ -18,7 +18,7 @@ keyword = input("검색할 제품 입력 : ")
 
 
 for page_num in range(1, 5):      
-    print(f"<<<<< {page_num} >>>>>")
+    print(f"<<<<< 페이지 {page_num} >>>>>")
     url = f"https://www.coupang.com/np/search?q={keyword}&page={page_num}&listSize=72"
     print(f"url : {url}")         
     print()
