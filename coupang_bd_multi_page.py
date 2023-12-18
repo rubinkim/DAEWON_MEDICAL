@@ -17,7 +17,7 @@ proxies = {"http": proxy_url, "https": proxy_url}
 keyword = input("검색할 제품 입력 : ")
 
 link_list = []
-for page_num in range(1, 5):      
+for page_num in range(1, 3):      
     print(f"<<<<< 페이지 {page_num} >>>>>")
     url = f"https://www.coupang.com/np/search?q={keyword}&page={page_num}&listSize=72"
     print(f"url : {url}")         
