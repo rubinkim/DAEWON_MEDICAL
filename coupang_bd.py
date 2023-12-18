@@ -45,3 +45,4 @@ page=3&rocketAll=false&searchIndexingToken=1=9&backgroundColor=
 # 위에서 %EB%85%B8%ED%8A%B8%EB%B6%81부분이 노트북임은 아래에서 확인할 수 가 있다.
 # https://www.coupang.com/np/search?q=노트북&channel=recent
 # https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81&channel=recent
+# 위url중 페이지가 3이라고 알 수 있는 부분은 url중 맨아랫줄에 page=3라는 부분이 있다.
