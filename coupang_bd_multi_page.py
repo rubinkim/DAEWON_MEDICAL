@@ -43,5 +43,5 @@ for page_num in range(1, 3):
         print(link)
         print()
         
-    print(link_list)
-    print(len(link_list))
+print(link_list)
+print(len(link_list))
