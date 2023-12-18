@@ -51,3 +51,5 @@ page=3&rocketAll=false&searchIndexingToken=1=9&backgroundColor=
 # 이렇게 변경한 url이 잘 작동하는지 알아보기 위해 page를 7로 바꿔서 불러보자.
 # https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81&page=7
 # 해봤더니 page7로 변경되서 원하는 페이지에 이동해 있는 것을 알 수 있다.
+
+# 이제 다음 이슈는 가능한한 많은 제품을 가져오는게 목적이므로 36개씩보기에서 72개씩보기로 변경해보자.
