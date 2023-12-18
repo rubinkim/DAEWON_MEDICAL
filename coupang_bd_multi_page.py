@@ -14,11 +14,11 @@ proxy_url = f"https://{user_name}:{password}@{host}"
 print(proxy_url)
 
 proxies = {"http": proxy_url, "https": proxy_url}
-keyword = input("ê²€ìƒ‰í•  ì œí’ˆ ìž…ë ¥ : ")
+keyword = input("ê²??ƒ‰?•  ? œ?’ˆ ?ž…? ¥ : ")
 
 link_list = []
 for page_num in range(1, 3):      
-    print(f"<<<<< íŽ˜ì´ì§€ {page_num} >>>>>")
+    print(f"<<<<< ?Ž˜?´ì§? {page_num} >>>>>")
     url = f"https://www.coupang.com/np/search?q={keyword}&page={page_num}&listSize=72"
     print(f"url : {url}")         
     print()
