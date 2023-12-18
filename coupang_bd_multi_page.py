@@ -9,36 +9,34 @@ host = "brd.superproxy.io:22225"
 user_name = "brd-customer-hl_878d4fe7-zone-unblocker"
 password = "ma5cz45h7cnv"
 
-# À§ÀÇ Á¤º¸µéÀ» ÀÌ¿ëÇØ¼­ proxy_urlÀ» ¸¸µç´Ù.
+
 proxy_url = f"https://{user_name}:{password}@{host}"
 print(proxy_url)
 
 proxies = {"http": proxy_url, "https": proxy_url}
-keyword = input("°Ë»öÇÒ Á¦Ç° ÀÔ·Â : ")
-#url = f"https://www.coupang.com/np/search?component=&q={keyword}"
+keyword = input("ê²€ìƒ‰í•  ì œí’ˆ ì…ë ¥ : ")
 
-for page_num in range(1, 5):      # ÄíÆÎ¿¡¼­ °Ë»öÇÒ ´Ü¾î¿¡ ÇØ´çÇÏ´Â ÆäÀÌÁö¸¦ 1ºÎÅÍ 4±îÁö °Ë»öÇØ¼­ ÀÚ·á¸¦ °¡Á®¿Ã °ÍÀÌ´Ù.
+
+for page_num in range(1, 5):      
     print(f"<<<<< {page_num} >>>>>")
     url = f"https://www.coupang.com/np/search?q={keyword}&page={page_num}&listSize=72"
-    print(f"url : {url}")         # urlÀÌ Àß ÀÛµ¿ÇÏ°í ÀÖ´ÂÁö È®ÀÎÇØº¼ ¸ñÀûÀÌ´Ù.
+    print(f"url : {url}")         
     print()
 
-    response = requests.get(url, proxies=proxies, verify=False)     # verify = False¸¦ ³Ö¾îÁÖ¸é sslÀÎÁõ°úÁ¤À» »ı·«ÇÏ±â ¶§¹®¿¡ ¿¡·¯°¡ ¹ß»ıÇÏÁö ¾Ê´Â´Ù.
+    response = requests.get(url, proxies=proxies, verify=False)    
     html = response.text
     #print(html[:1000])
     soup = BeautifulSoup(html, "html.parser")
-    #items = soup.select(".search-product.search-product__ad-badge") # class ÀÌ´Ï±î .À» ¾Õ¿¡ Âï¾ú´Ù. ±×¸®°í search-product search-product__ad-badge´Â ºóÄ­À» .À¸·Î ¹Ù²Ù¾î¾ß ÇÑ´Ù.
-                                                                    # ÇÑÈ­¸é¿¡ 36°³¾¿ º¸±â·Î µÇ¾î ÀÖ´Âµ¥ 59°³°¡ ³ª¿Ô´Ù. ¼±»ıÀº 36ÀÌ´Ù. ¿Ö ³ª¸¸?
-
-    items = soup.select("[class=search-product]")                    # ÀÌÁ¦¼­¾ß 27°³°¡ ³ª¿Ô´Ù.            
+    
+    items = soup.select("[class=search-product]")                               
     print(len(items))
 
     for item in items:
-        name = item.select_one(".name").text                         # select¸¦ ÀÌ¿ëÇÏ¸é list¸¦ returnÇÏ¹Ç·Î ´Ù½Ã [0]¿Í °°Àº ÀÛ¾÷À» ÇØÁà¾ß ÇÏ´Âµ¥ select_oneÀº value¸¦ returnÇÑ´Ù.
+        name = item.select_one(".name").text                         
         price = item.select_one(".price-value")
-        if not price:                                                # Áß°íÁ¦Ç°ÀÎ °æ¿ì¿¡´Â price.value¶ó´Â class°¡ ¾øÀ¸¹Ç·Î .text¸¦ ¾ÈºÙÀÌ¸é ¿¡·¯°¡ ¹ß»ıÇÏ´Â ´ë½Å noneÀ» ¹İÈ¯ÇÑ´Ù.
+        if not price:                                               
             continue
         link = f"https://coupang.com{item.a['data-product-link']}"
-        print(f"{name} : {price.text}")                              # Å©·Ñ¸µÇÒ ¶§ ¸¶´Ù °á°ú°ªÀÌ ´Ù¸£°Ô ³ª¿Â´Ù.
+        print(f"{name} : {price.text}")                              
         print(link)
         print()

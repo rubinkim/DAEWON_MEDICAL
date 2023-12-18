@@ -16,6 +16,7 @@ print(proxy_url)
 proxies = {"http": proxy_url, "https": proxy_url}
 keyword = input("검색할 제품 입력 : ")
 url = f"https://www.coupang.com/np/search?component=&q={keyword}"
+
 response = requests.get(url, proxies=proxies, verify=False)     # verify = False를 넣어주면 ssl인증과정을 생략하기 때문에 에러가 발생하지 않는다.
 html = response.text
 #print(html[:1000])
@@ -63,4 +64,4 @@ recent&backgroundColor=&searchProductCount=1215796&component=&rating=0&sorter=sc
 # 이중 한꺼번에 72개씩 보기와 관련된 부분은 맨마지막에 &listSize=72로 표기되어 있다. 이부분만 복붙하자. 페이지를 3으로 해보자.
 # https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81&page=3&listSize=72
 # 페이지는 3이고 72개씩 보기로 잘 변경되어 있는게 확인된다.
-# 이제 우리는 이걸로 위의 라인 18에 있는 url을 변경해준다.
+# 이제 우리는 이걸로 위의 라인 18에 있는 url을 변경해준다. 이것은 coupang_bd_multi_page.py에서 다룬다.
