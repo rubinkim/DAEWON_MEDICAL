@@ -60,3 +60,4 @@ offerCondition=&filter=&availableDeliveryFilter=&filterType=&isPriceRange=false&
 priceRange=&minPrice=&maxPrice=&page=1&trcid=&traid=&filterSetByUser=true&channel=
 recent&backgroundColor=&searchProductCount=1215796&component=&rating=0&sorter=scoreDesc&listSize=72
 """
+# 이중 한꺼번에 72개씩 보기와 관련된 부분은 맨마지막에 &listSize=72로 표기되어 있다. 이부분만 복붙하자.
