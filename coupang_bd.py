@@ -46,3 +46,5 @@ page=3&rocketAll=false&searchIndexingToken=1=9&backgroundColor=
 # https://www.coupang.com/np/search?q=노트북&channel=recent
 # https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81&channel=recent
 # 위url중 페이지가 3이라고 알 수 있는 부분은 url중 맨아랫줄에 page=3라는 부분이 있다.
+# 나머지는 다 필요가 없고 검색어와 페이지만 url에서 아래와 같이 뽑는다.
+# https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81&page=3
