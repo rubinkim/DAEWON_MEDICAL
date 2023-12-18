@@ -53,3 +53,10 @@ page=3&rocketAll=false&searchIndexingToken=1=9&backgroundColor=
 # 해봤더니 page7로 변경되서 원하는 페이지에 이동해 있는 것을 알 수 있다.
 
 # 이제 다음 이슈는 가능한한 많은 제품을 가져오는게 목적이므로 36개씩보기에서 72개씩보기로 변경해보자.
+# 변경한 다음 url을 다시 복사해서 붙인 다음 살펴보기로 한다.
+"""
+https://www.coupang.com/np/search?rocketAll=false&searchId=1848feeeb133446fb9d9702195312bba&q=%EB%85%B8%ED%8A%B8%EB%B6%81&brand=&
+offerCondition=&filter=&availableDeliveryFilter=&filterType=&isPriceRange=false&
+priceRange=&minPrice=&maxPrice=&page=1&trcid=&traid=&filterSetByUser=true&channel=
+recent&backgroundColor=&searchProductCount=1215796&component=&rating=0&sorter=scoreDesc&listSize=72
+"""
